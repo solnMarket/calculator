@@ -1,0 +1,46 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 50%;
+    width: 20%;
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    
+}
+
+.input {
+    border: 2px solid black;
+    height: 9%;
+    width: 100%;
+    
+}
+
+.buttonKeys{
+    border: 2px solid black;
+    height: 100%;
+    padding: 5px;
+    
+    
+}
+
+.keys {
+    height: 100%;
+    width: 100%;
+}
