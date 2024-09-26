@@ -14,6 +14,7 @@ html,body {
 }
 
 .container {
+    background-color: gray;
     height: 50%;
     width: 20%;
     padding: 20px;
@@ -26,6 +27,9 @@ html,body {
 }
 
 .input {
+    
+    font-size: 30px;
+    background-color: bisque;
     border: 2px solid black;
     height: 12%;
     width: 100%; 

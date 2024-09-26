@@ -1,18 +1,22 @@
-function calculate(a, o, b){    
-    switch(o){
-        case "+":
-            return Number(a) + Number(b);
-            break;
-        case "-":
-            return a - b;
-            break;
-        case "*":
-            return a * b;
-            break;
-        case "/":
-            return a / b;
-        default:
-            return "you did something wrong"
+function calculate(expression){ 
+    if(expression.includes("+")){
+        let plus = expression.split("+")
+        return Number(plus[0]) + Number(plus[1])
+
+    }else if(expression.includes("-")){
+        let minus = expression.split("-")
+        return Number(minus[0]) - Number(minus[1])
+
+    }else if(expression.includes("*")){
+        let mult = expression.split("*")
+        return Number(mult[0]) * Number(mult[1])
+
+    }else if(expression.includes("/")){
+        let div = expression.split("/")
+        if(div[1]==="0"){
+            return "cant divide by zero dumbahh"
+        }
+        return Number(div[0]) / Number(div[1])   
     }
 }
 
@@ -22,17 +26,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     keys.forEach(key => {
         key.addEventListener("click", function() {
+
             if(this.textContent === "C"){
                 value.textContent = ""
             }
+
+            if(this.textContent=== "="){
+                value.textContent = calculate(value.textContent)
+            }
+            if((value.textContent.includes("+") || value.textContent.includes("-") || value.textContent.includes("*") || value.textContent.includes("/")) && (this.textContent==="+" || this.textContent==="-" || this.textContent==="*" || this.textContent==="/")){
+                value.textContent = calculate(value.textContent) 
+            }
+
             if(!(this.textContent === "=" || this.textContent === "C")){
                 value.textContent = value.textContent + this.textContent;
             }
-            if(this.textContent=== "="){
-                let input = value.textContent.split("")
-
-                value.textContent = calculate(input[0], input[1], input[2])
-            }
+            
+            
             
         });
     });
