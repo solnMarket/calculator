@@ -27,20 +27,20 @@ html,body {
 
 .input {
     border: 2px solid black;
-    height: 9%;
-    width: 100%;
-    
+    height: 12%;
+    width: 100%; 
 }
 
 .buttonKeys{
     border: 2px solid black;
     height: 100%;
-    padding: 5px;
-    
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.keys {
-    height: 100%;
-    width: 100%;
+.key {
+    width: 75px;
+    height: 70px;
+    margin: 0%;
+    font-size: 30px;
 }
